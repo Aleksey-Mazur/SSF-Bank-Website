@@ -1,0 +1,54 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+  width: 100%;
+  padding: 0 6rem;
+  z-index: 100;
+
+  .nav__logo {
+    height: 4.5rem;
+    transition: all 0.3s;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    .nav__item {
+      margin-left: 4rem;
+
+      .nav__link,
+      &:visited {
+        font-size: 1.7rem;
+        font-weight: 400;
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s;
+      }
+
+      .nav__link--btn:link,
+      &:visited {
+        padding: 0.8rem 2.5rem;
+        border-radius: 3rem;
+        background-color: $color-primary;
+        color: #222;
+
+        &:hover,
+        &:active {
+          color: inherit;
+          background-color: $color-primary-darker;
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+.nav.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+}
