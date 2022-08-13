@@ -1,6 +1,12 @@
 @import '_variables';
 @import 'navigation';
 @import '_header';
+@import 'features';
+@import 'operations';
+@import 'testimonials';
+@import 'signup';
+@import 'footer';
+@import 'modal-window';
 
 * {
   margin: 0;
@@ -79,10 +85,10 @@ img {
   border-radius: 10rem;
   cursor: pointer;
   transition: all 0.3s;
-}
 
-.btn:hover {
-  background-color: $color-primary-darker;
+  &:hover {
+    background-color: $color-primary-darker;
+  }
 }
 
 .btn--text {
