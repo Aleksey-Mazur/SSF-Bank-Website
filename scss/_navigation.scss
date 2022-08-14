@@ -67,6 +67,22 @@
   display: none;
 }
 
+.menu-icon._active {
+  span {
+    transform: scale(0) translate(0, -50%);
+  }
+
+  &::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+  }
+
+  &::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+  }
+}
+
 @media (max-width: 968px) {
   .nav__links {
     flex-direction: column;
