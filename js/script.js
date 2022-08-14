@@ -18,3 +18,13 @@ navLink.forEach(link => {
     navMenu.classList.remove('_active');
   });
 });
+
+// ========== SMOOTH SCROLL ==========
+navLink.forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+    });
+  });
+});
