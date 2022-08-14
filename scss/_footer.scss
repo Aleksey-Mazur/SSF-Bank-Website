@@ -32,3 +32,23 @@
     text-align: center;
   }
 }
+
+@media (max-width: 860px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+
+    .footer__nav {
+      flex-direction: column;
+      align-items: center;
+
+      .footer__item {
+        margin: 1rem;
+
+        .footer__link {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

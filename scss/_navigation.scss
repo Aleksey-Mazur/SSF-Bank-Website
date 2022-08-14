@@ -1,11 +1,11 @@
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   height: 9rem;
   width: 100%;
   padding: 0 6rem;
-  z-index: 100;
+  z-index: 3;
 
   .nav__logo {
     height: 4.5rem;
@@ -51,4 +51,92 @@
 .nav.sticky {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.95);
+}
+
+.nav__logo {
+  position: absolute;
+  top: 2.2rem;
+  left: 9rem;
+  height: 4.5rem;
+  transition: all 0.3s;
+  z-index: 5;
+}
+// ========== BURGER ==========
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 968px) {
+  .nav__links {
+    flex-direction: column;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 3rem;
+    right: 6rem;
+    height: 2.2rem;
+    width: 3rem;
+    cursor: pointer;
+    z-index: 5;
+
+    span,
+    &::before,
+    &::after {
+      left: 0;
+      position: absolute;
+      height: 10%;
+      width: 100%;
+      transition: all 0.3s ease;
+      background-color: #444;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      top: 50%;
+      transform: scale(1) translate(0, -50%);
+    }
+  }
+
+  .nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    transform: translate(0, -100%);
+    transition: all 0.3s ease;
+
+    .nav__links {
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+
+      .nav__item {
+        margin: 2rem;
+
+        .nav__link {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .nav._active {
+    transform: translate(0, 0);
+  }
 }
