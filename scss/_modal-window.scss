@@ -10,6 +10,8 @@
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
   transition: all 0.5s;
+  max-height: 90vh;
+  overflow-y: auto;
 
   .modal__header {
     font-size: 3.25rem;
@@ -83,4 +85,48 @@
   color: #bbb;
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+// ========== RESPONSIVE ==========
+@media (max-width: 1200px) {
+  .modal {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    padding: 3rem;
+    width: 86%;
+
+    .btn--close-modal {
+      top: 0;
+      right: 1rem;
+    }
+
+    .modal__header {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .modal__form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin: 0 2rem;
+
+      label {
+        font-size: 1.4rem;
+      }
+
+      input {
+        width: 80%;
+      }
+
+      button {
+        margin: 2rem 0 1rem;
+      }
+    }
+  }
 }
