@@ -61,6 +61,7 @@
   transition: all 0.3s;
   z-index: 5;
 }
+
 // ========== BURGER ==========
 
 .menu-icon {
@@ -143,7 +144,7 @@
       width: 80%;
 
       .nav__item {
-        margin: 2rem;
+        margin: 2rem 0 2rem;
 
         .nav__link {
           font-size: 2rem;
@@ -154,5 +155,11 @@
 
   .nav._active {
     transform: translate(0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav__logo {
+    left: 6rem;
   }
 }

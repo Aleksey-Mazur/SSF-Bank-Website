@@ -55,9 +55,11 @@
   transform: translateY(-6rem);
 }
 
+// ========== RESPONSIVE ==========
+
 @media (max-width: 968px) {
   .header__img {
-    grid-area: auto;
+    display: none;
   }
 }
 

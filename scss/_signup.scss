@@ -5,17 +5,20 @@
   text-align: center;
   padding: 10rem 3rem;
 
-  .section__title {
-    margin-bottom: 6rem;
-
-    .section__header {
-      color: #fff;
-      text-align: center;
-    }
+  .section__title .section__header {
+    color: #fff;
+    text-align: center;
   }
 
   .btn {
     font-size: 1.9rem;
     padding: 2rem 5rem;
+  }
+}
+
+// ========== RESPONSIVE ==========
+@media (max-width: 768px) {
+  .section--sign-up .section__title .section__header {
+    margin-bottom: 6rem;
   }
 }

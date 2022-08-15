@@ -37,3 +37,76 @@
     }
   }
 }
+
+// ========== RESPONSIVE ==========
+
+@media (max-width: 1200px) {
+  .features {
+    margin: 0 6rem;
+
+    .features__img {
+      margin-top: 10%;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (max-width: 968px) {
+  .features {
+    margin: 0 2rem;
+    column-gap: 2rem;
+
+    .features__img {
+      margin-top: 20%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 0 2rem;
+
+    .features__img {
+      width: 80%;
+    }
+
+    .features__feature {
+      width: 84%;
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    .feature__item-1 {
+      order: 1;
+    }
+    .feature__item-2 {
+      order: 2;
+    }
+    .feature__item-3 {
+      order: 3;
+    }
+    .feature__item-4 {
+      order: 4;
+    }
+    .feature__item-5 {
+      order: 5;
+    }
+    .feature__item-6 {
+      order: 6;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .features .features__img {
+    width: 100%;
+  }
+}

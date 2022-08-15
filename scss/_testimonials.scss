@@ -148,3 +148,31 @@
 .section__title--testimonials {
   margin-bottom: 4rem;
 }
+
+// ========== RESPONSIVE ==========
+@media (max-width: 768px) {
+  .slider {
+    margin-top: 2rem;
+
+    .testimonial {
+      text-align: center;
+      width: 76%;
+
+      &::before {
+        font-size: 12rem;
+        top: -2rem;
+        left: -4rem;
+      }
+
+      .testimonial__text {
+        line-height: 1.4;
+      }
+    }
+
+    .slider__btn {
+      font-size: 1.4rem;
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+}

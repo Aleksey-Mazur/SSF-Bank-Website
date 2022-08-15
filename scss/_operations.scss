@@ -101,3 +101,47 @@
     row-gap: 0.5rem;
   }
 }
+
+// ========== RESPONSIVE ==========
+@media (max-width: 678px) {
+  .operations {
+    .operations__tab-container .operations__tab {
+      font-size: 1.4rem;
+      margin-right: 2rem;
+      padding: 1rem 2rem;
+    }
+
+    .operations__content {
+      padding: 2.5rem 2rem 6.5rem;
+
+      .operations__header {
+        font-size: 2rem;
+        line-height: 1.6;
+      }
+
+      p {
+        grid-column: 1/3;
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .operations {
+    .operations__tab-container .operations__tab {
+      font-size: 1.4rem;
+      margin-right: 1rem;
+      padding: 1rem 2rem;
+
+      span {
+        margin-right: 0.4rem;
+      }
+    }
+
+    .operations__content {
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
