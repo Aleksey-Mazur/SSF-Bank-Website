@@ -24,6 +24,7 @@ const dotContainer = document.querySelector('.dots');
 // ========== MENU BURGER ==========
 burgerIcon.addEventListener('click', () => {
   document.body.classList.toggle('_lock');
+  document.querySelector('.nav img').style.display = 'none';
   burgerIcon.classList.toggle('_active');
   navMenu.classList.toggle('_active');
 });
@@ -104,6 +105,7 @@ const handleHover = function (e) {
       if (el !== link) el.style.opacity = this;
     });
     logo.style.opacity = this;
+    document.querySelector('.nav img').style.opacity = this;
   }
 };
 // Passing "argument" into handler
@@ -115,9 +117,16 @@ const navHeight = nav.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
   const [entry] = entries;
-  !entry.isIntersecting
-    ? nav.classList.add('sticky')
-    : nav.classList.remove('sticky');
+
+  if (!entry.isIntersecting) {
+    nav.classList.add('sticky');
+    nav.insertAdjacentHTML(
+      'afterbegin',
+      '<img src="img/logo.png" alt="SSF logo" class="nav__logo" id="logo" />'
+    );
+  } else {
+    nav.classList.remove('sticky');
+  }
 };
 
 const headerObserver = new IntersectionObserver(stickyNav, {

@@ -111,10 +111,15 @@ img {
 }
 
 // ========== RESPONSIVE ==========
+@media (max-width: 968px) {
+  .section {
+    padding: 6rem 3rem;
+  }
+}
 
 @media (max-width: 768px) {
   .section {
-    padding: 6rem 3rem;
+    padding: 3rem 1rem;
 
     .section__title {
       text-align: center;

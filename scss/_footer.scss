@@ -5,6 +5,7 @@
   .footer__nav {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 5rem;
 
@@ -39,18 +40,23 @@
   .footer {
     display: flex;
     flex-direction: column;
+    padding: 4rem 3rem;
 
     .footer__nav {
-      flex-direction: column;
       align-items: center;
+      margin-bottom: 2rem;
 
       .footer__item {
-        margin: 1rem;
+        margin: 1rem 2rem;
 
         .footer__link {
           font-size: 2rem;
         }
       }
+    }
+
+    .footer__logo {
+      margin-bottom: 2rem;
     }
   }
 }
